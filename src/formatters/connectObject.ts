@@ -6,7 +6,7 @@ export function connectObject(
 ) {
   let ids;
   if (typeof objWithIds === "object" && (<ObjectWithId>objWithIds).id) {
-    ids = ids.id;
+    ids = objWithIds.id;
   } else if (Array.isArray(objWithIds)) {
     ids = objWithIds.map((o: any) => o.id);
   }
